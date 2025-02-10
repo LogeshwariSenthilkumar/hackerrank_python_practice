@@ -1,0 +1,18 @@
+if __name__ == '__main__':
+    records=[]
+    values=[]
+    names=[]
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        records.append([name,score])
+    for item in records:
+        values.append(item[1])
+    values=list(set(values))
+    values.sort()
+    for item in records:
+        if item[1]==values[1]:
+            names.append(item[0])
+    names.sort()
+    for name in names:
+        print(name)
